@@ -22,10 +22,11 @@ body{
     width: 40%;
     min-width: 800px;
     position: relative;
-    transform: translate(-50%,-50%);
-    top: 20%;
+    transform: translateX(-50%);
+    /* top: 20%; */
     left: 50%;
     padding: 30px 40px;
+    /* flex */
 }
 .mframe{
     position: relative;
