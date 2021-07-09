@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* 
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chivo', sans-serif;
+}
+.main{
+    height: 100vh;
+}
+body{
+    background: linear-gradient(to left, #1b1a1b, #3a313f)
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box, .prompt_box{
+    width: 500px;
+    height: 300px;
+    border-radius: 30px;
+    border-color: rgb(134, 119, 221);
+    border-style: solid;
+    background: white;
+    flex-direction: column;
+    box-shadow: 10px black;
+
+}
+.box :is(h1, p, form){
+    margin: 8px;
+    font-family: 'Chivo', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+.box h1{
+    font-family: 'Roboto', sans-serif;
+}
+form{
+    flex-direction: column;
+}
+form input{
+    margin-bottom: 8px;
+    width: 350px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #00000073;
+}
+.btn{
+    width: 150px;
+    height: 35px;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #503857;
+    color: #fff;
+}
+.prompt_box{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+}
+.prompt_box h1{
+    margin-bottom: 10px;
+}
+.prompt_box.active{
+    display: flex;
+}
+#lin{
+    width: 300px;
+    text-align: center;
+}

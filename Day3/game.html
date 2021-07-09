@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessGame/DOM</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main center">
+        <div class="box center">
+            <h1>Guess The Number Game</h1>
+            <p id="lin">guess any number in range 1-100, guess in max 10 guesses, else you lose</p>
+            <p id="chancesTxt" style="color :rgb(255, 0, 0); "></p>
+            <form action="" class="center">
+                <input type="number" id="num" min="1" max="100" placeholder="Enter Number" required>
+                <button type="submit" class="btn" id="btn"><b>Enter</b></button>
+                <p id="txt" style="color: red;"></p>
+            </form>
+        </div>
+    </div>
+    <div class="prompt_box center" id="prompt_box">
+        <h1 id="promt_txt"></h1>
+        <button type="submit" class="btn" onclick="play();">Play Again</button>
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>

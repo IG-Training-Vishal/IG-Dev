@@ -11,10 +11,10 @@ const colorElement=document.getElementById("color");
 const clearElement=document.getElementById("clear");
 const ctx=canvas.getContext("2d");
 
-canvas.addEventListener("mousedown",(e)=>{
+canvas.addEventListener("mousedown",()=>{
     isPressed=true;
-    x=e.offsetX;
-    y=e.offsetX;
+    x=offsetX;
+    y=offsetX;
 
 });
 canvas.addEventListener("mouseup",(e)=>{
@@ -44,7 +44,7 @@ function lines(x1,y1,x2,y2){
     ctx.beginPath(x1,y1);
     ctx.moveTo(x1,y1);
     ctx.lineTo(x2,y2);
-    ctx.strokeStyle=color;
+    //ctx.strokeStyle=color;
     ctx.linewidth=size*2;
     ctx.stroke();
 }
@@ -70,5 +70,6 @@ clearElement.addEventListener("click",()=>{
 });
 colorElement.addEventListener("change",(e)=>{
     color=e.target.value;
-    // ctx.strokeStyle=color;
+    ctx.strokeStyle=color;
+    ctx.fillstyle=color;
 })

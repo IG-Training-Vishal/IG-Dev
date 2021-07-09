@@ -4,7 +4,7 @@ const promt_txt = document.getElementById("promt_txt");
 const txt = document.getElementById("txt");
 const num = document.getElementById("num");
 // let chancesTxt = document.getElementById("chancesTxt");
-let randomNumber = Math.floor(Math.random() * 10) + 1;
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 
 let number;
 // let Chances = 3;
