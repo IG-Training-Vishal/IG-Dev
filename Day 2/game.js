@@ -3,28 +3,30 @@ const prompt_box = document.getElementById("prompt_box");
 const promt_txt = document.getElementById("promt_txt");
 const txt = document.getElementById("txt");
 const num = document.getElementById("num");
-// let chancesTxt = document.getElementById("chancesTxt");
-let randomNumber = Math.floor(Math.random() * 10) + 1;
+let randomNumber ;
 
 let number;
-// let Chances = 3;
-// chancesTxt.innerHTML = "Chances:- " + Chances;
-console.log(randomNumber);
+//console.log(randomNumber);
 
 btn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(num.value);
-//   Chances--;
-//   chancesTxt.innerHTML = "Chances:- " + Chances;
-//   if (Chances == 0) {
-//     activateBox("Loss");
-//   }
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+  console.log(`number=${num.value} random number=${randomNumber}`);
   number = num.value;
   checkNum(number);
   num.value = "";
 });
 
 function checkNum(number) {
+  if(number===null){
+    alert("enter a value");
+  }
+
+  else if (number>100) {
+    alert("Enter no less than or equal to 100");
+  }else if (number <0) {
+    alert("Enter no greater than or equal to 0");
+  }
   if (number == randomNumber) {
     activateBox("Win");
   } else if (number > randomNumber) {
@@ -36,12 +38,9 @@ function checkNum(number) {
 
 function activateBox(e) {
   prompt_box.classList.add("active");
-  promt_txt.innerHTML = "You " + e + " The Game";
+  promt_txt.innerHTML = e ;
   randomNumber = Math.floor(Math.random() * 100) + 1;
 }
 function play(e) {
   prompt_box.classList.remove("active");
-//   Chances = 3;
-//   txt.innerHTML = "";
-//   chancesTxt.innerHTML = "Chances:- " + Chances;
 }
