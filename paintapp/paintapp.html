@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">        
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <title>paint tool</title>
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <!-- <script src="jscolor.js"></script> -->
+        <script src="paintapp.js"></script>
+        
+    </head>
+    <body>
+        <div class="wrapper">
+ 
+            <div class="toolbar">
+                <a class="selected" href="#" id="open" onclick="OpenImage()"><img src="outline_home_black_24dp.png"></a>
+                <a href="#" id="save" onclick="SaveImage()" download="bloom.png"><img src="outline_done_black_24dp.png"></a>
+                <!-- <div id="img-data-div"> -->
+                    <a href="#" id="img-file" download="image.png"><img src="outline_download_black_24dp.png"></a>
+                <!-- </div> -->
+                <a href="#" id="brush" onclick="ChangeTool('brush')"><img src="outline_brush_black_24dp.png"></a>
+                <a href="#" id="line" onclick="ChangeTool('line')"><img src="outline_show_chart_black_24dp.png"></a>
+                <a href="#" id="rectangle" onclick="ChangeTool('rectangle')"><img src="outline_check_box_outline_blank_black_24dp.png"></a>
+                <a href="#" id="circle" onclick="ChangeTool('circle')"><img src="outline_circle_black_24dp.png"></a>
+                <a href="#" id="ellipse" onclick="ChangeTool('ellipse')"><img src="outline_all_inclusive_black_24dp.png"></a>
+                <a href="#" id="polygon" onclick="ChangeTool('polygon')"><img src="outline_dashboard_black_24dp.png"></a>
+                <a href="#" id="palette" onclick="ChangeTool('palette')"><button id="color1" value="Click me" onclick="msg()"><img src="outline_palette_black_24dp.png"></button></a>
+                <a href="#" id="increment" onclick="ChangeTool('increment')"><button id="increase1" value="Click me" onclick="msg()"><img src="outline_add_black_24dp.png"></button></a>
+                <a href="#" id="decrement" onclick="ChangeTool('decrement')"><button id="decrease1" value="Click me" onclick="msg()"><img src="outline_remove_black_24dp.png"></button></a>
+                <a href="#" id="reset" onclick="ChangeTool('reset')"><button id="clear1" value="Click me" onclick="erase()"><img src="outline_refresh_black_24dp.png"></button></a>
+               
+               
+                <!-- <a href="#" id="polygon" onclick="ChangeTool('polygon')"><button id="clear" value="Click me" onclick="msg()"><img src="outline_palette_black_24dp.png"></button></a> -->
+
+            </div><br>
+            
+<canvas id="my-canvas" width="400" height="200" color="white"></canvas>
+            <!-- <div id="img-data-div">
+                <a href="#" id="img-file" download="image.png">Dewast</a>
+            </div> -->
+            <!-- <div class="drawingBox">
+                <input type="color" id="color" >
+                <button id="decrease">-</button>
+                <span id="size">1</span>
+                <button id="increase">+</button>
+                <button id="clear"><img src="outline_palette_black_24dp.png"></button>
+                 <div id="img-data-div">
+                    <a href="#" id="img-file" black="image.png"><img src="outline_download_black_24dp.png"></a>
+                </div> -->
+              </div> 
+ 
+        </div>
+    </body>
+</html>
